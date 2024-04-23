@@ -1,0 +1,26 @@
+header, nav, main {
+    max-width: 60rem;
+    margin: auto;
+}
+
+// NAV STUFF
+nav ul li a {
+    font-size: .9rem;
+    padding: .5rem 1.2rem; //this makes the anchor height just a bit smaller since on desktop you use a mouse
+}
+
+// MAIN STUFF
+
+// customer reviews stuff
+div.reviews {
+    section {
+        grid-template-columns: 200px auto;
+        column-gap: 12px;
+    } //end section
+} //end div.reviews
+
+// service card mask stuff
+div.allServices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -1,0 +1,130 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+}
+
+// HEADER STUFF
+#headerWrapper {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+header {
+    display: flex;
+    padding: 1rem $gutter;
+    gap: 8px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 166px auto 40px;
+    a.phone {
+        grid-column: 3/span 1;
+        color: $primaryColor;
+        &:hover {
+            background-color: rgb(167, 167, 167);
+            border-radius: 5px;
+        }
+    } // end a.phone
+} // end header
+
+
+
+
+// MAIN STUFF
+main h1, div.allServices, div.reviews {padding: 0 $gutter;}
+
+
+// slider stuff
+.swiper, .swiper img {
+    width: 100%;
+    height: auto;
+}
+
+// customer reviews stuff
+div.reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7px;
+    margin: 2rem 0;
+    section {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        img {
+            width: 100%;
+            height: auto;
+            clip-path: circle(50% at 50% 50%);
+            // transition: transform 1s;
+            // &:hover {transform: rotate(15deg);}
+        }
+        // p {}
+    } //end section
+} //end div.reviews
+
+// card mask stuff
+div.allServices {
+    display: grid;
+    column-gap: 5px;
+    margin: 2rem 0;
+    section {
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 2px solid $primaryColor;
+        border-radius: 8px;
+        overflow: hidden;
+        h2 {
+            margin: 0;
+            padding: 5px 5px;
+            text-align: center;
+            background-color: $primaryColor;
+            font-weight: $normalWeight;
+            color: white;
+
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        img:last-child { //whatever rules applied to img will also be applied here, but this lets you style the last child (the mask) in each section
+            position: absolute;
+            bottom:0;
+        }
+    } //end section
+} //end div.allServices
+
+
+
+
+
+// FOOTER STUFF
+#footerWrapper {
+    background-color: $primaryColor;
+}
+
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}

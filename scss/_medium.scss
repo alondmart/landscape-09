@@ -1,0 +1,97 @@
+header {
+ padding: 2rem $gutter;
+ h1 {
+    font-size: 2rem;
+    font-weight: $boldWeight;
+}   
+}
+
+#navWrapper {
+    background-color: $menuColor;
+}
+
+nav button {display: none;}
+ul { //this is to get rid of the dots and padding for the ul
+    list-style-type: none;
+    padding: 0;
+}
+// ul#primaryNav {margin: 0;}
+nav {
+    background-color: $menuColor;
+    ul {
+        display: flex;
+        margin-left: $gutter;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        border-left: 1px solid rgba(0,0,0,.1) ;
+        li {
+            border-right: 1px solid rgba(0,0,0,.1) ;
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 1rem;
+                padding: .9rem 1.2rem;
+                color: rgba(255,255,255,.9);
+                transition: background 0.3s linear;
+                &:hover {background-color: rgba(0,0,0,.5) ;}
+            } // end a
+        } // end li
+    } // end ul
+    #primaryNav li.parent > a:after {  //the > means only the immediate anchor children, not grandchildren anchors
+        content: "\25BC";
+        font-size: .65rem;
+        color: rgba(255,255,255,.5);
+        float: left;
+    }
+
+    ul li ul { // this talks to the submenu, these are the actual drop downs that appear when hovering over the main parent menu items
+        display: flex;
+        flex-direction: column;
+        background-color: darken($menuColor, 5%);
+        border: none;
+        width: 14rem;
+        position: absolute;
+        left: -999rem; //this moves the submenu items way off the page
+        z-index:99;
+    } // end child ul
+
+    ul li ul li { //this talks to the submenu items
+        border-right: none;
+        border-top: 1px solid rgba(0,0,0,.2) ;
+    } // end child li
+
+    ul li:hover ul { // this is what makes the sub menu items appear when hovering over their parent
+        left: auto;
+        margin-left: 0;
+    }
+
+    li.active a {
+        background-color: rgba(0,0,0,.25);
+    }
+
+} // end nav
+
+
+// MAIN STUFF
+
+// customer reviews stuff
+div.reviews {
+    section {
+        display:grid;
+        grid-template-columns: 140px auto;
+        padding: 10px;
+        column-gap: 8px;
+        // img {
+
+        // }
+
+    } //end section
+} //end div.reviews
+
+
+// service card mask stuff
+div.allServices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

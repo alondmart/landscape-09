@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Earthworks Landscape</title>
+    <meta name="description" content="Alondra's sample start file">
+    <meta name="author" content="Alondra Martinez">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- style sheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+    <!-- fav icon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+ 
+
+    
+    
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <a href="index.html"><img src="images/logo1x.png" alt="earthworks landscape logo" width="166" height="50" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <!-- <h1>Earthworks Landscape</h1> -->
+            <a class="phone" href><img src="images/phone.png" alt="phone icon" width="40" height="40"> </a>
+        </header>
+    </div>
+    
+    <div id="navWrapper">
+        <nav>
+            <button id="hamburgerBtn" > &#9776; </button>
+            <ul id="primaryNav" >
+            <li><a href="#">Home</a>
+            <li class="parent" ><a href="#">Services</a>
+                <ul>
+                    <li class="active"><a href="#">Landscaping</a>
+                    <li><a href="#">Snow Removal</a>
+                    <li><a href="#">Construction</a>
+                </ul><!-- end submenu-->
+            </li>
+            <li><a href="#">Quotes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul> <!-- end ul primaryNav-->
+        </nav>
+    </div> <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+        <main>
+    
+            <!-- Slider main container (this is from getting started with swiper under "use swiper from CDN")-->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"> 
+                        <picture>
+                            <source srcset="images/sliderA-sm.webp" media="(max-width: 746px)" >
+                            <source srcset="images/sliderA-md.webp" media="(max-width: 1172px)" >
+                            <img src="images/sliderA-lg.webp" alt="sliderA" width="2" height="1">
+                        </picture>
+                    </div> <!--end of one slide-->
+
+                    <div class="swiper-slide"> 
+                        <picture>
+                            <source srcset="images/sliderB-sm.webp" media="(max-width: 746px)" >
+                            <source srcset="images/sliderB-md.webp" media="(max-width: 1172px)" >
+                            <img src="images/sliderB-lg.webp" alt="sliderB" width="2" height="1">
+                        </picture>
+                    </div> <!--end of one slide-->
+
+                    <div class="swiper-slide"> 
+                        <picture>
+                            <source srcset="images/sliderC-sm.webp" media="(max-width: 746px)" >
+                            <source srcset="images/sliderC-md.webp" media="(max-width: 1172px)" >
+                            <img src="images/sliderC-lg.webp" alt="sliderC" width="2" height="1">
+                        </picture>
+                    </div> <!--end of one slide-->
+
+                </div> <!--end swiper wrapper-->
+                <!-- If we need pagination these are the little dots that show how many slides you have-->
+                <div class="swiper-pagination"></div>
+            </div> <!--end swiper-->
+            <h1>Landscaping Services</h1> <!-- this has to match the active nav page-->
+            
+
+
+            <div class="allServices">
+                <section>
+                    <h2>Sprinkler System</h2>
+                    <img src="images/sprinkler.webp" alt="sprinkler system" width="400" height="250">
+                    <img src="images/fluidedge.png" alt="water edge mask" width="400" height="41">
+                </section>
+                <section>
+                    <h2>Retaining Walls</h2>
+                    <img src="images/retainingwall.webp" alt="rock retaining wall" width="400" height="250">
+                    <img src="images/rocky.png" alt="rocky edge mask" width="400" height="65">
+                </section>
+                <section>
+                    <h2>Pavers</h2>
+                    <img src="images/pavers.png" alt="paved patio" width="400" height="250">
+                    <img src="images/rocky.png" alt="rocky edge mask" width="400" height="65">
+                </section>
+                <section>
+                    <h2>Fire Pits</h2>
+                    <img src="images/firepit.webp" alt="fire pit" width="400" height="250">
+                    <img src="images/fluidedge.png" alt="water edge mask" width="400" height="41">
+                </section>
+            </div>
+
+
+
+            <div class="reviews">
+                <section>
+                    <img src="images/person1.webp" alt="person 1" width="200" height="200">
+                    <p>After having Earthworks Landscape install a sprinkler system in my yard, I couldn't be happier with the results. From the initial consultation to the final installation, their team was professional, efficient, and knowledgeable. Now, my lawn looks lush and healthy, and I no longer have to worry about manually watering it</p>
+                </section> <!--end one customer-->
+
+                <section>
+                    <img src="images/person2.webp" alt="person 2" width="200" height="200">
+                    <p>I recently hired Earthworks Landscape to construct a stunning fire pit in my backyard, and I couldn't be more pleased with the outcome. Their attention to detail and craftsmanship were evident throughout the entire process. Now, my family and I enjoy cozy evenings around the fire, making memories that will last a lifetime.</p>
+                </section> <!--end one customer-->
+            </div> <!--end reviews div-->
+
+
+
+
+
+
+
+
+
+
+        </main>
+    </div> <!--end mainwrapper-->
+
+    <div id="footerWrapper">
+        <footer>
+            <p> &copy; <span id="year">x</span> Alondra Martinez   </p>
+        </footer>
+    </div> <!--end footer wrapper-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
